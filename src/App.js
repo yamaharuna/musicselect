@@ -63,13 +63,28 @@ function App() {
         </label>
       </div>
 
-      <ul style={{ marginTop: "20px" }}>
-        {filteredSongs.map(song => (
-          <li key={song.name + song.artist}>
-            {song.name} - {song.tempo} BPM - danceability: {song.danceability}
-          </li>
-        ))}
-      </ul>
+      <ul style={{ listStyle: "none", padding: 0 }}>
+  {filteredSongs.map(song => (
+    <li
+      key={song.name + song.artist}
+      style={{ display: "flex", alignItems: "center", marginBottom: 10 }}
+    >
+      <img
+        src={song.album_art_url}
+        alt={song.name}
+        width={50}
+        height={50}
+        style={{ marginRight: 10, borderRadius: 4 }}
+      />
+      <span>
+        <strong>{song.name}</strong> - {song.tempo.toFixed(1)} BPM
+        <br />
+        <small>{song.artist}</small>
+      </span>
+    </li>
+  ))}
+</ul>
+
     </div>
   );
 }
