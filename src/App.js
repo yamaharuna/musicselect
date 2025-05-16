@@ -50,11 +50,11 @@ function App() {
       <h2>フィルタースライダー</h2>
       <Slider label="テンポ (BPM)" min={50} max={200} value={tempoTarget} onChange={setTempoTarget} />
       <Slider label="許容範囲 (Tolerance)" min={0.01} max={0.5} step={0.01} value={tolerance} onChange={setTolerance} />
-      <Slider label="Danceability" min={0} max={1} step={0.01} value={danceabilityTarget} onChange={setDanceabilityTarget} />
-      <Slider label="Energy" min={0} max={1} step={0.01} value={energyTarget} onChange={setEnergyTarget} />
-      <Slider label="Valence" min={0} max={1} step={0.01} value={valenceTarget} onChange={setValenceTarget} />
-      <Slider label="Acousticness" min={0} max={1} step={0.01} value={acousticnessTarget} onChange={setAcousticnessTarget} />
-      <Slider label="Instrumentalness" min={0} max={1} step={0.01} value={instrumentalnessTarget} onChange={setInstrumentalnessTarget} />
+      <Slider label="踊りやすさ" min={0} max={1} step={0.01} value={danceabilityTarget} onChange={setDanceabilityTarget} />
+      <Slider label="エネルギッシュさ" min={0} max={1} step={0.01} value={energyTarget} onChange={setEnergyTarget} />
+      <Slider label="明るさ" min={0} max={1} step={0.01} value={valenceTarget} onChange={setValenceTarget} />
+      <Slider label="アコースティック度" min={0} max={1} step={0.01} value={acousticnessTarget} onChange={setAcousticnessTarget} />
+      <Slider label="インスト感" min={0} max={1} step={0.01} value={instrumentalnessTarget} onChange={setInstrumentalnessTarget} />
 
       <h2>一致する楽曲: {filteredSongs.length} 件</h2>
       <ul style={{ listStyle: "none", padding: 0 }}>
